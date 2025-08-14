@@ -16,7 +16,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate": "knex migrate:latest",
     "start": "node index.js",
-    "dev": "PORT=3001 nodemon index.js",
+    "dev": "npm run migrate && PORT=3001 nodemon index.js",
+    "dev:script": "node scripts/dev.js",
     "dev:env": "cp .env.example .env && echo 'Please update .env with your OpenAI API key'"
   },
   "author": "",
